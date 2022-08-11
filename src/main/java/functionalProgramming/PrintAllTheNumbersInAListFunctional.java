@@ -1,5 +1,7 @@
 package functionalProgramming;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.List;
 
 public class PrintAllTheNumbersInAListFunctional {
@@ -11,9 +13,9 @@ public class PrintAllTheNumbersInAListFunctional {
 
     }
     //prints the number
-    private static void print(int number){
-        System.out.println(number);
-    }
+//    private static void print(int number){
+//        System.out.println(number);
+//    }
 
     private static void printAllNumbersInList(List<Integer> numbers) {
         //instead on focusing on how to loop we focus on what to do
@@ -37,7 +39,8 @@ public class PrintAllTheNumbersInAListFunctional {
 
         //take numbers convert to stream for each element do a print
         numbers.stream()
-                .forEach(PrintAllTheNumbersInAListFunctional::print);// class::method
+                .forEach(System.out::println);// class::method-method reference
+                    //.forEach(PrintAllTheNumbersInAListFunctional::print);
     }
 }
 
